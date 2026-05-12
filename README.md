@@ -1,73 +1,226 @@
-# React + TypeScript + Vite
+# QuantInsight Lab
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+QuantInsight Lab is an AI-assisted quantitative finance web application built with Python and Flask.  
+It allows users to upload stock market data, analyze price trends, test trading strategies, generate rule-based buy scores, and run machine-learning-based market direction prediction.
 
-Currently, two official plugins are available:
+This project was developed with the assistance of Cursor AI. The product idea, feature planning, testing, debugging, UI direction, and final integration were guided by the project owner.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[Open QuantInsight Lab]([https://your-render-url.onrender.com](https://quantinsight-lab.onrender.com/))
 
-## Expanding the ESLint configuration
+Replace the link above with your actual Render website URL.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Project Overview
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+QuantInsight Lab is designed as a decision-first stock analysis dashboard.  
+Instead of only showing raw stock data, the system helps users answer practical questions such as:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- What does the current market data look like?
+- Is the stock showing a weak, neutral, or bullish signal?
+- Which trading strategy performs better on the uploaded data?
+- What does the Random Forest model predict for the next 5 trading days?
+- How do different machine learning models compare?
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The project is mainly for learning, research, and portfolio demonstration purposes.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Key Features
+
+### 1. Stock Data Upload
+
+Users can upload stock market CSV files for analysis.
+
+Supported data includes:
+
+- Date
+- Open
+- High
+- Low
+- Close
+- Volume
+
+The system automatically cleans and validates the uploaded data.
+
+---
+
+### 2. Market Dashboard
+
+The dashboard provides an overview of the uploaded stock data, including:
+
+- Date range
+- Total rows
+- Average close price
+- Maximum close price
+- Minimum close price
+- Average volume
+- Price chart
+- Moving average chart
+- Volume chart
+- Daily return distribution
+
+---
+
+### 3. Buy Score System
+
+QuantInsight Lab includes a rule-based Buy Score System.
+
+The score is calculated using technical indicators such as:
+
+- RSI
+- MACD
+- Moving averages
+- Volume signals
+
+The system gives a final recommendation such as:
+
+- Strong Buy
+- Buy
+- Neutral
+- Weak
+- Avoid
+
+This feature works like a simple rule-based expert system for stock signal evaluation.
+
+---
+
+### 4. Strategy Lab
+
+Users can test trading strategies on uploaded stock data.
+
+Current strategy logic includes:
+
+- Moving Average strategy
+- RSI strategy
+- MACD strategy
+
+The system calculates performance metrics such as:
+
+- Total return
+- Annualized return
+- Sharpe ratio
+- Maximum drawdown
+- Volatility
+- Win rate
+
+---
+
+### 5. Strategy Comparison
+
+The Strategy Comparison page compares different trading strategies on the same dataset.
+
+It helps users understand which strategy is more suitable for the current stock data.
+
+Example comparison:
+
+- Moving Average strategy
+- RSI strategy
+- MACD strategy
+
+---
+
+### 6. Machine Learning Analysis
+
+The ML Analysis page provides three workflows:
+
+1. AI Direction Predictor  
+2. Compare All Models  
+3. Train Single Model  
+
+The goal is to make the ML page easier to use for both normal users and advanced users.
+
+---
+
+### 7. Random Forest Predictor
+
+The Random Forest Predictor estimates whether the stock price may rise in the next 5 trading days.
+
+It provides:
+
+- Up probability
+- Down probability
+- Recommendation
+- Test accuracy
+- Feature importance
+
+The model uses technical features such as:
+
+- Daily return
+- RSI
+- MACD
+- Moving averages
+- Volume ratio
+- Volatility
+
+---
+
+### 8. Report Page
+
+The report page summarizes the analysis result and provides a cleaner view of the key findings.
+
+---
+
+## Tech Stack
+
+- Python
+- Flask
+- Pandas
+- NumPy
+- Matplotlib
+- Plotly
+- Scikit-learn
+- YFinance
+- Gunicorn
+- HTML
+- CSS
+- JavaScript
+- Cursor AI
+
+---
+
+## Project Structure
+
+```text
+quantinsight-lab/
+│
+├── app.py
+├── config.py
+├── requirements.txt
+├── Procfile
+├── runtime.txt
+├── README.md
+│
+├── modules/
+│   ├── backtester.py
+│   ├── buy_score.py
+│   ├── data_agent.py
+│   ├── data_cleaner.py
+│   ├── data_loader.py
+│   ├── indicators.py
+│   ├── ml_engine.py
+│   ├── ml_predictor.py
+│   ├── report_builder.py
+│   ├── strategies.py
+│   └── visualizer.py
+│
+├── templates/
+│   ├── base.html
+│   ├── upload.html
+│   ├── dashboard.html
+│   ├── strategy.html
+│   ├── strategy_comparison.html
+│   ├── ml_analysis.html
+│   └── report.html
+│
+├── static/
+│   ├── css/
+│   ├── js/
+│   ├── assets/
+│   └── generated/
+│
+└── uploads/
