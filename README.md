@@ -1,6 +1,7 @@
 # QuantInsight Lab
 
-QuantInsight Lab is an AI-assisted quantitative finance web application built with Python and Flask.  
+QuantInsight Lab is an AI-assisted quantitative finance web application built with Python and Flask.
+
 It allows users to upload stock market data, analyze price trends, test trading strategies, generate rule-based buy scores, and run machine-learning-based market direction prediction.
 
 This project was developed with the assistance of Cursor AI. The product idea, feature planning, testing, debugging, UI direction, and final integration were guided by the project owner.
@@ -9,15 +10,14 @@ This project was developed with the assistance of Cursor AI. The product idea, f
 
 ## Live Demo
 
-[Open QuantInsight Lab][https://your-render-url.onrender.com](https://quantinsight-lab.onrender.com/)
-
-Replace the link above with your actual Render website URL.
+[Open QuantInsight Lab](https://your-render-url.onrender.com)
 
 ---
 
 ## Project Overview
 
-QuantInsight Lab is designed as a decision-first stock analysis dashboard.  
+QuantInsight Lab is designed as a decision-first stock analysis dashboard.
+
 Instead of only showing raw stock data, the system helps users answer practical questions such as:
 
 - What does the current market data look like?
@@ -47,8 +47,6 @@ Supported data includes:
 
 The system automatically cleans and validates the uploaded data.
 
----
-
 ### 2. Market Dashboard
 
 The dashboard provides an overview of the uploaded stock data, including:
@@ -63,8 +61,6 @@ The dashboard provides an overview of the uploaded stock data, including:
 - Moving average chart
 - Volume chart
 - Daily return distribution
-
----
 
 ### 3. Buy Score System
 
@@ -87,8 +83,6 @@ The system gives a final recommendation such as:
 
 This feature works like a simple rule-based expert system for stock signal evaluation.
 
----
-
 ### 4. Strategy Lab
 
 Users can test trading strategies on uploaded stock data.
@@ -108,8 +102,6 @@ The system calculates performance metrics such as:
 - Volatility
 - Win rate
 
----
-
 ### 5. Strategy Comparison
 
 The Strategy Comparison page compares different trading strategies on the same dataset.
@@ -122,19 +114,15 @@ Example comparison:
 - RSI strategy
 - MACD strategy
 
----
-
 ### 6. Machine Learning Analysis
 
 The ML Analysis page provides three workflows:
 
-1. AI Direction Predictor  
-2. Compare All Models  
-3. Train Single Model  
+- AI Direction Predictor
+- Compare All Models
+- Train Single Model
 
 The goal is to make the ML page easier to use for both normal users and advanced users.
-
----
 
 ### 7. Random Forest Predictor
 
@@ -156,8 +144,6 @@ The model uses technical features such as:
 - Moving averages
 - Volume ratio
 - Volatility
-
----
 
 ### 8. Report Page
 
