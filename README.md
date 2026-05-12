@@ -9,7 +9,7 @@ This project was developed with the assistance of Cursor AI. The product idea, f
 
 ## Live Demo
 
-[Open QuantInsight Lab]([https://your-render-url.onrender.com](https://quantinsight-lab.onrender.com/))
+[Open QuantInsight Lab][https://your-render-url.onrender.com](https://quantinsight-lab.onrender.com/)
 
 Replace the link above with your actual Render website URL.
 
